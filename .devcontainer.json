@@ -1,7 +1,7 @@
 {
   "name": "scratch",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12-bookworm",
   "features": {
-    "ghcr.io/rio/features/chezmoi:1": {}
+    "ghcr.io/devcontainers/features/nix:1": {}
   }
 }
