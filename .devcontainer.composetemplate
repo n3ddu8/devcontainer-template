@@ -1,0 +1,9 @@
+{
+  "name": "devcontainer-template",
+  "dockerComposeFile": "docker-compose.yaml",
+  "service": "workspace",
+  "features": {
+    "ghcr.io/devcontainers/features/nix:1": {},
+    "ghcr.io/rio/features/chezmoi:1": {}
+  }
+}

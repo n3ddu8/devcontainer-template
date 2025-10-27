@@ -1,0 +1,38 @@
+services:
+  workspace:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: workspace-devcontainer:latest
+    container_name: devcontainer-template
+    volumes:
+      - .:/workspace:cached
+    command: sleep infinity
+    environment:
+      ACCEPT_EULA: "Y"
+    depends_on:
+      - sftp
+      - sqlserver
+
+  sftp:
+    image: atmoz/sftp
+    container_name: sftp-server
+    ports:
+      - "2222:22"
+    volumes:
+      - $HOME/Volumes/sftp/testuser/upload:/home/testuser/upload
+    environment:
+      SFTP_USERS: "testuser:testpass:1001"
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sql-server
+    ports:
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: "YourStrong@Password"
+      ACCEPT_EULA: "Y"
+    volumes:
+      - $HOME/Volumes/sql-server/data:/var/opt/mssql/data
+      - $HOME/Volumes/sql-server/log:/var/opt/mssql/log
+
