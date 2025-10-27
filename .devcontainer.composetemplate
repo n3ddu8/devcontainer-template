@@ -5,5 +5,6 @@
   "features": {
     "ghcr.io/devcontainers/features/nix:1": {},
     "ghcr.io/rio/features/chezmoi:1": {}
-  }
+  },
+  "postCreateCommand": "pip install -r requirements-dev.txt && pre-commit install"
 }

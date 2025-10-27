@@ -1,0 +1,17 @@
+/bin
+/include
+/lib
+/lib64
+/share
+/build
+/Scripts
+/dist
+/ods
+
+pyodbc.pyi
+pyvenv.cfg
+scratch.py
+*.log
+*.egg-info
+*.template
+__pycache__
