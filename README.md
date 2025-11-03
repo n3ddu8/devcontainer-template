@@ -6,13 +6,13 @@ Welcome to the one repo you’ll clone, forget about, and then rediscover six mo
 
 ## :toolbox: What’s in the box?
 
-This repo is a buffet of options for spinning up a Python devcontainer with all the bells, whistles, and unnecessary complexity you secretly enjoy:
+This repo is a buffet of options for spinning up a Python devcontainer with all the bells, whistles, and unnecessary complexity you secretly enjoy. Pick your branch, pick your poison:
 
-- .devcontainer.json — launches a scratch container using a prebuilt image. Fast, clean, and boring.
-- .devcontainer.dockertemplate — builds from a Dockerfile. Because you like pain.
-- .devcontainer.composetemplate — builds from docker-compose.yaml. For when one container just isn’t enough.
+- main — includes a basic .devcontainer.json that launches a scratch container using a prebuilt image. Fast, clean, and boring.
+- dockerfile — builds from a Dockerfile with a .devcontainer.json alongside. Because you like pain.
+- dockercompose — builds from docker-compose.yaml with a .devcontainer.json and Dockerfile. For when one container just isn’t enough.
 
-Swap in whichever config suits your mood. Or don’t. I’m not your manager.
+Choose your flavor. Or don’t. I’m not your manager.
 
 ## :snake: The Dockerfile
 
@@ -51,9 +51,9 @@ pytest --cov=classes --cov-fail-under=80
 
 Yes, it’s hardcoded to classes. No, I won’t apologize.
 
-## :package: Chezmoi + Nix
+## :package: Chezmoi + Homebrew + Neovim
 
-Dotfiles and package management for people who think YAML is too mainstream. Included because you’re the kind of person who reads Arch Wiki for fun.
+Dotfiles and package management for people who think YAML is too mainstream. Neovim for the keystroke masochists, Homebrew for the package pragmatists, and Chezmoi to keep it all reproducible.
 
 ## :notebook: How to use this
 
