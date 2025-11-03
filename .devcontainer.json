@@ -1,6 +1,7 @@
 {
   "name": "devcontainer-template",
-  "image": "mcr.microsoft.com/devcontainers/python:3-bookworm",
+  "dockerComposeFile": "docker-compose.yaml",
+  "service": "workspace",
   "features": {
     "ghcr.io/devcontainers-extra/features/neovim-homebrew:1": {},
     "ghcr.io/rio/features/chezmoi:1": {}
